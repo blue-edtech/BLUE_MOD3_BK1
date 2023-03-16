@@ -1,0 +1,31 @@
+.main {
+  @apply min-h-screen;
+
+@media (min-width: 1000px) {
+  width:
+
+990px
+
+;
+}
+
+width:
+
+600
+px
+
+;
+max-width:
+
+calc
+(
+100
+vw
+
+-
+97
+px
+
+)
+;
+}
