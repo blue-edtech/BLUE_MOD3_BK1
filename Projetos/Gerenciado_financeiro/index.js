@@ -2,9 +2,11 @@ const express = require('express');
 const app = express();
 const cors = require("cors");
 const sequelize = require('./model/database');
-//const User = require('./model/user');
 
 const User = require('./routers/user_router');
+const Conta = require('./routers/conta_router');
+const Categoria = require('./routers/categoria_router');
+const Movimentacao = require('./routers/Movimentacao_router');
 
 const port = process.env.PORT || 3000;
 app.use(express.json());
@@ -23,6 +25,9 @@ app.get('/', (req, res) => {
 });
 
 app.use("/user", User);
+app.use("/conta", Conta);
+app.use("/categoria", Categoria);
+app.use("/movimentacao", Movimentacao);
 
 app.get('/test-conection', async (req, res) => {
   try {
